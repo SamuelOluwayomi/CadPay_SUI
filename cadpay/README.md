@@ -1,4 +1,6 @@
-# Sui dApp Starter Template
+# CadPay
+
+CadPay is a revolutionary product designed to help users transact with crypto using a seamless Web2-like feel and UI, enabling you to pay for literally anything. It also empowers merchants to put themselves on the web, making their products and services available to anyone, anywhere.
 
 This dApp was created using `@mysten/create-dapp` that sets up a basic React
 Client dApp using the following tools:
