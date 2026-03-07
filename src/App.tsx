@@ -1,13 +1,13 @@
 import { Navbar } from "./components/layout/Navbar";
-import { WalletStatus } from "./WalletStatus";
+import { Hero } from "./components/home/Hero";
 
 function App() {
   return (
     <div className="min-h-screen">
       <Navbar />
 
-      <main className="container mx-auto px-4 py-8">
-        <WalletStatus />
+      <main>
+        <Hero />
       </main>
     </div>
   );
