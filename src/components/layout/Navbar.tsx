@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ConnectButton } from "@mysten/dapp-kit-react/ui";
-import { List, X } from "@phosphor-icons/react";
+import { ListIcon, X } from "@phosphor-icons/react";
 import { cn } from "../../lib/utils";
 
 type NavLink = {
@@ -50,7 +50,7 @@ export function Navbar() {
                     className="md:hidden text-muted-foreground hover:text-foreground transition-colors"
                     onClick={() => setMobileOpen((prev) => !prev)}
                 >
-                    {mobileOpen ? <X size={22} /> : <List size={22} />}
+                    {mobileOpen ? <X size={22} /> : <ListIcon size={22} />}
                 </button>
             </div>
 
