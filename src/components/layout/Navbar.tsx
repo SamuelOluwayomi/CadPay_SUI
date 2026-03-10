@@ -1,60 +1,82 @@
-import { FloatingDock } from "../ui/floating-dock";
+import { useState } from "react";
 import { ConnectButton } from "@mysten/dapp-kit-react/ui";
-import { House } from "@phosphor-icons/react/dist/csr/House";
-import { CreditCard } from "@phosphor-icons/react/dist/csr/CreditCard";
-import { Storefront } from "@phosphor-icons/react/dist/csr/Storefront";
+import { ListIcon, XIcon } from "@phosphor-icons/react";
+import { cn } from "../../lib/utils";
+
+type NavLink = {
+    label: string;
+    href: string;
+};
+
+const NAV_LINKS: NavLink[] = [
+    { label: "Home", href: "/" },
+    { label: "Pay", href: "/pay" },
+    { label: "Merchants", href: "/merchants" },
+];
 
 export function Navbar() {
-    const links = [
-        {
-            title: "Home",
-            icon: <House className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-            href: "/",
-        },
-        {
-            title: "Pay",
-            icon: <CreditCard className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-            href: "/pay",
-        },
-        {
-            title: "Merchants",
-            icon: <Storefront className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
-            href: "/merchants",
-        },
-    ];
+    const [mobileOpen, setMobileOpen] = useState(false);
 
     return (
-        <>
-            {/* Top Header for Brand & Connect Button */}
-            <header className="fixed top-0 inset-x-0 z-50 pointer-events-none">
-                <div className="container mx-auto flex h-16 items-center justify-between px-4 pointer-events-auto">
-                    <a href="/" className="text-xl font-bold tracking-tight text-foreground drop-shadow-md bg-background/50 backdrop-blur-md px-3 py-1 rounded-full border border-border/50">
-                        Cadpay
-                    </a>
+        <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
+            <div className="container mx-auto flex h-16 items-center justify-between px-4">
+                {/* Brand */}
+                <a href="/" className="text-xl font-bold tracking-tight text-foreground">
+                    Cadpay
+                </a>
 
-                    {/* Desktop nav links restored */}
-                    <nav className="hidden md:flex items-center gap-6 bg-background/50 backdrop-blur-md px-6 py-2 rounded-full border border-border/50">
-                        {links.map((link) => (
-                            <a
-                                key={link.href}
-                                href={link.href}
-                                className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
-                            >
-                                {link.title}
-                            </a>
-                        ))}
-                    </nav>
+                {/* Desktop nav links */}
+                <nav className="hidden md:flex items-center gap-6">
+                    {NAV_LINKS.map((link) => (
+                        <a
+                            key={link.href}
+                            href={link.href}
+                            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                        >
+                            {link.label}
+                        </a>
+                    ))}
+                </nav>
 
-                    <div className="drop-shadow-md">
+                {/* Desktop connect button */}
+                <div className="hidden md:block">
+                    <ConnectButton />
+                </div>
+
+                {/* Mobile menu toggle */}
+                <button
+                    type="button"
+                    aria-label="Toggle mobile menu"
+                    className="md:hidden text-muted-foreground hover:text-foreground transition-colors"
+                    onClick={() => setMobileOpen((prev) => !prev)}
+                >
+                    {mobileOpen ? <XIcon size={22} /> : <ListIcon size={22} />}
+                </button>
+            </div>
+
+            {/* Mobile dropdown */}
+            <div
+                className={cn(
+                    "md:hidden overflow-hidden transition-all duration-300",
+                    mobileOpen ? "max-h-96 border-t border-border" : "max-h-0",
+                )}
+            >
+                <nav className="flex flex-col gap-1 px-4 py-4">
+                    {NAV_LINKS.map((link) => (
+                        <a
+                            key={link.href}
+                            href={link.href}
+                            className="text-sm text-muted-foreground py-2 hover:text-foreground transition-colors"
+                            onClick={() => setMobileOpen(false)}
+                        >
+                            {link.label}
+                        </a>
+                    ))}
+                    <div className="pt-3">
                         <ConnectButton />
                     </div>
-                </div>
-            </header>
-
-            {/* Bottom Floating Navigation Dock */}
-            <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
-                <FloatingDock items={links} />
+                </nav>
             </div>
-        </>
+        </header>
     );
 }
