@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Blue circle background -->
+  <circle cx="100" cy="100" r="100" fill="#6FBCF0"/>
+
+  <!-- Outer white water drop shape -->
+  <path d="
+    M100 30
+    C100 30, 55 75, 55 115
+    C55 140 75 162 100 162
+    C125 162 145 140 145 115
+    C145 75 100 30 100 30 Z
+  " fill="white"/>
+
+  <!-- Left blue inner curve (lower left teardrop cutout) -->
+  <path d="
+    M88 150
+    C75 150, 68 138, 68 126
+    C68 112, 80 98, 95 88
+    C95 88, 80 102, 80 118
+    C80 134, 88 148, 100 150
+    C96 150.5, 92 150, 88 150 Z
+  " fill="#6FBCF0"/>
+
+  <!-- Right blue inner curve (upper right teardrop cutout) -->
+  <path d="
+    M112 52
+    C125 62, 132 78, 132 94
+    C132 108, 120 122, 105 132
+    C105 132, 120 118, 120 102
+    C120 86, 112 72, 100 62
+    C104 58, 108 55, 112 52 Z
+  " fill="#6FBCF0"/>
+</svg>
