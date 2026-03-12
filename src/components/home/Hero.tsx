@@ -48,9 +48,12 @@ export function Hero() {
             {/* Content Foreground */}
             <div className="container relative z-10 mx-auto px-4 flex flex-col items-start justify-center text-left h-full pt-4">
                 {/* Headline */}
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-4xl mb-6 leading-[1.1] text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.8)]">
-                    Global Crypto Payments, <br className="hidden md:block" />
-                    <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-orange-300 to-amber-400">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-4xl mb-6 leading-[1.1] text-white selection:bg-primary/30">
+                    <span className="inline-block selection:text-white drop-shadow-[0_2px_10px_rgba(255,255,255,0.15)]">
+                        Global Crypto Payments,
+                    </span> 
+                    <br className="hidden md:block" />
+                    <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-amber-400 to-orange-500 drop-shadow-[0_2px_15px_rgba(249,115,22,0.3)]">
                         Instant Local Settlement
                     </span>
                 </h1>
