@@ -57,8 +57,8 @@ export function Navbar() {
                                 className={cn(
                                     "relative flex items-center gap-1.5 text-sm px-4 py-2 rounded-full transition-all duration-200 font-medium",
                                     isActive
-                                        ? "text-foreground bg-white/10 shadow-inner"
-                                        : "text-muted-foreground hover:text-foreground hover:bg-white/8",
+                                        ? "text-foreground bg-white/5 border border-primary shadow-[0_0_8px_rgba(249,115,22,0.3)]"
+                                        : "text-muted-foreground hover:text-foreground hover:bg-white/8 border border-transparent",
                                 )}
                             >
                                 <Icon size={15} weight={isActive ? "fill" : "regular"} className={isActive ? "text-primary" : ""} />
@@ -116,8 +116,8 @@ export function Navbar() {
                                 className={cn(
                                     "flex items-center gap-2 text-sm py-2.5 px-4 rounded-full transition-all duration-200",
                                     isActive
-                                        ? "text-foreground bg-white/10 font-semibold"
-                                        : "text-muted-foreground hover:text-foreground hover:bg-white/8",
+                                        ? "text-foreground bg-white/5 font-semibold border border-primary"
+                                        : "text-muted-foreground hover:text-foreground hover:bg-white/8 border border-transparent",
                                 )}
                             >
                                 <Icon size={16} weight={isActive ? "fill" : "regular"} className={isActive ? "text-primary" : ""} />

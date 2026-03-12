@@ -31,7 +31,6 @@ export function Hero() {
                                 { start: { lat: 64.2008, lng: -149.4937 }, end: { lat: 40.7128, lng: -74.006 } }, // Alaska → NY
                                 { start: { lat: 25.2048, lng: 55.2708 }, end: { lat: 28.6139, lng: 77.209 } },     // Dubai → Delhi
                                 { start: { lat: -33.8688, lng: 151.2093 }, end: { lat: 37.5665, lng: 126.978 } }, // Sydney → Seoul
-                                // Extended reach
                                 { start: { lat: -53.1638, lng: -70.9171 }, end: { lat: -22.9068, lng: -43.1729 } }, // Punta Arenas → Rio (deep South America)
                                 { start: { lat: 71.1705, lng: 25.9842 }, end: { lat: 55.7558, lng: 37.6173 } },    // North Cape → Moscow (far North)
                                 { start: { lat: 78.9, lng: 11.9 }, end: { lat: 48.8566, lng: 2.3522 } },           // Svalbard → Paris (Arctic)
@@ -49,9 +48,9 @@ export function Hero() {
             {/* Content Foreground */}
             <div className="container relative z-10 mx-auto px-4 flex flex-col items-start justify-center text-left h-full pt-4">
                 {/* Headline */}
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-4xl mb-6 leading-[1.1] text-foreground">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-4xl mb-6 leading-[1.1] text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.8)]">
                     Global Crypto Payments, <br className="hidden md:block" />
-                    <span className="text-transparent bg-clip-text bg-linear-to-r from-sui via-blue-400 to-indigo-500">
+                    <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-orange-300 to-amber-400">
                         Instant Local Settlement
                     </span>
                 </h1>
