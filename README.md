@@ -1,62 +1,66 @@
-# Sui dApp Starter Template
+# CadPay on Sui
 
-This dApp was created using `@mysten/create-dapp` that sets up a basic React
-Client dApp using the following tools:
+CadPay is a modern, responsive decentralized application (dApp) built on the Sui blockchain. It leverages a modern frontend stack to deliver a seamless and engaging user experience, featuring interactive 3D elements, secure authentication, and smooth animations.
 
-- [React](https://react.dev/) as the UI framework
-- [TypeScript](https://www.typescriptlang.org/) for type checking
-- [Vite](https://vitejs.dev/) for build tooling
-- [Tailwind CSS v4](https://tailwindcss.com/) for styling
-- [Lucide React](https://lucide.dev/) for icons
-- [`@mysten/dapp-kit-react`](https://sdk.mystenlabs.com/dapp-kit) for connecting
-  to wallets and loading data
-- [pnpm](https://pnpm.io/) for package management
+## Features
+
+- **Sui Blockchain Integration**: Powered by `@mysten/dapp-kit-react` and `@mysten/sui` for robust Web3 wallet connections and transactions.
+- **Authentication**: Seamless onboarding and wallet management with Privy (`@privy-io/react-auth`).
+- **Interactive UI**:
+  - 3D Globe visualization (`@react-three/fiber`, `@react-three/drei`)
+  - Fluid animations and transitions with `framer-motion`
+  - High-quality, reusable components (Floating Dock, World Map, etc.)
+- **Modern Tech Stack**: Built with React 19, Vite, Tailwind CSS v4, and TypeScript.
+- **State Management**: Utilizing `@tanstack/react-query` and `@nanostores/react` for efficient data fetching and global state management.
 
 ## Project Structure
 
-```
+```text
 src/
-├── components/ui/     # Reusable UI components (Card)
-├── lib/utils.ts       # Utility functions (cn for classnames)
-├── App.tsx            # Main application component
-├── WalletStatus.tsx   # Wallet connection status display
-├── OwnedObjects.tsx   # Display objects owned by connected wallet
-├── dApp-kit.ts        # dApp Kit configuration
-└── index.css          # Tailwind CSS with theme variables
+├── components/
+│   ├── home/        # Landing page components (e.g., Hero section)
+│   ├── layout/      # Shared layout components (e.g., Navbar)
+│   └── ui/          # Reusable UI elements (e.g., World Map, Floating Dock)
+├── lib/             # Utility functions
+├── App.tsx          # Main application root
+└── index.css        # Tailwind v4 configuration and theme variables
 ```
 
-## Starting your dApp
+## Getting Started
 
-To install dependencies you can run
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [pnpm](https://pnpm.io/) (recommended package manager)
+
+### Installation
+
+1. Install project dependencies:
 
 ```bash
 pnpm install
 ```
 
-To start your dApp in development mode run
+2. Start the development server:
 
 ```bash
 pnpm dev
 ```
 
-## Building
+The app will be available at `http://localhost:5173`.
 
-To build your app for deployment you can run
+### Building for Production
+
+To build the application for deployment, run:
 
 ```bash
 pnpm build
 ```
 
-## Customizing the UI
+This will run type checking and generate the production bundle in the `dist` folder.
 
-This template uses [Tailwind CSS v4](https://tailwindcss.com/docs) for styling
-with [shadcn/ui](https://ui.shadcn.com/)-style components. The UI components in
-`src/components/ui/` are based on shadcn/ui patterns and can be customized or
-extended.
+## Styling & Customization
 
-To add more shadcn/ui components, you can copy them from the
-[shadcn/ui components](https://ui.shadcn.com/docs/components) documentation and
-adapt them to work with your project.
-
-Theme variables are defined in `src/index.css` using Tailwind's `@theme`
-directive.
+This project uses **Tailwind CSS v4** for styling alongside motion-based animations. 
+- Theme variables and global styles are defined in `src/index.css`.
+- The UI components located in `src/components/ui/` are highly customizable and can be tailored to fit your specific design needs.
