@@ -39,6 +39,21 @@ export function Hero() {
                                 { start: { lat: 64.1355, lng: -21.8954 }, end: { lat: 40.7128, lng: -74.006 } },  // Reykjavik → NY (far NW)
                                 { start: { lat: 1.3521, lng: 103.8198 }, end: { lat: 25.2048, lng: 55.2708 } },   // Singapore → Dubai
                                 { start: { lat: 19.4326, lng: -99.1332 }, end: { lat: 40.7128, lng: -74.006 } },  // Mexico City → NY
+                                { start: { lat: 43.6532, lng: -79.3832 }, end: { lat: 52.5200, lng: 13.4050 } },   // Toronto → Berlin
+                                { start: { lat: 37.7749, lng: -122.4194 }, end: { lat: 35.6762, lng: 139.6503 } }, // San Francisco → Tokyo
+                                { start: { lat: -33.9249, lng: 18.4232 }, end: { lat: -34.6037, lng: -58.3816 } }, // Cape Town → Buenos Aires
+                                { start: { lat: 19.0760, lng: 72.8777 }, end: { lat: -37.8136, lng: 144.9631 } },  // Mumbai → Melbourne
+                                { start: { lat: 49.2827, lng: -123.1207 }, end: { lat: -36.8485, lng: 174.7633 } },// Vancouver → Auckland
+                                { start: { lat: 39.9042, lng: 116.4074 }, end: { lat: 51.5074, lng: -0.1278 } },   // Beijing → London
+                                { start: { lat: 41.8781, lng: -87.6298 }, end: { lat: 4.7110, lng: -74.0721 } },   // Chicago → Bogota
+                                { start: { lat: 30.0444, lng: 31.2357 }, end: { lat: 41.9028, lng: 12.4964 } },    // Cairo → Rome
+                                { start: { lat: -6.2088, lng: 106.8456 }, end: { lat: -33.8688, lng: 151.2093 } }, // Jakarta → Sydney
+                                { start: { lat: -12.0464, lng: -77.0282 }, end: { lat: 25.7617, lng: -80.1918 } }, // Lima → Miami
+                                { start: { lat: 13.7563, lng: 100.5018 }, end: { lat: 22.3193, lng: 114.1694 } },  // Bangkok → Hong Kong
+                                { start: { lat: 41.0082, lng: 28.9784 }, end: { lat: 24.7136, lng: 46.6753 } },    // Istanbul → Riyadh
+                                { start: { lat: 51.1657, lng: 10.4515 }, end: { lat: 39.9042, lng: 116.4074 } },   // Germany → Beijing
+                                { start: { lat: -23.5505, lng: -46.6333 }, end: { lat: 6.5244, lng: 3.3792 } },    // Sao Paulo → Lagos
+                                { start: { lat: 59.3293, lng: 18.0686 }, end: { lat: 40.7128, lng: -74.006 } },    // Stockholm → NY
                             ]}
                         />
                     </div>
